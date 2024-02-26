@@ -2,18 +2,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Add this line to center both the board and result vertically */
     height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 5px;
-    background-color: #eee;
+    background-color: black;
     padding: 10px;
-    border: 2px solid #333;
+    border: 2px solid #2980b9;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .cell {
@@ -24,11 +28,20 @@ body {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    color: #2c3e50;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: black;
 }
 
 .result {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: bold;
+    color: #e74c3c;
+    order: -1;
 }
